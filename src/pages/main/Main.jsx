@@ -7,8 +7,10 @@ import { useNavigate } from "react-router-dom";
 import img1 from "../../assets/wheat.png";
 import img2 from "../../assets/farmer.png";
 import { List, ListItem } from "@mui/material";
+import { useUserCtx } from "../../UserContext";
 
-const MainPage = ({ setNotLoginOrSignUp }) => {
+const MainPage = () => {
+  const { setNotLoginOrSignUp } = useUserCtx();
   const navigate = useNavigate();
   function handleSignIn() {
     setNotLoginOrSignUp((prev) => !prev);
@@ -97,7 +99,7 @@ const MainPage = ({ setNotLoginOrSignUp }) => {
               gap: "50px",
               justifyContent: "center",
               alignItems: "center",
-              p: 2,
+              p: 1,
             }}
           >
             <Box>
