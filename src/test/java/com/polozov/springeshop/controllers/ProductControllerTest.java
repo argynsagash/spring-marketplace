@@ -36,8 +36,8 @@ class ProductControllerTest {
     @MockBean
     private SessionObjectHolder sessionObjectHolder;
 
-    private ProductDto dto1 = new ProductDto(998L, "TestProduct998", 888.88);
-    private ProductDto dto2 = new ProductDto(999L, "TestProduct999", 999.99);
+    private ProductDto dto1 = new ProductDto(998L, "TestProduct998", 888.88, "hahaha");
+    private ProductDto dto2 = new ProductDto(999L, "TestProduct999", 999.99, "hihihihi");
 
     @BeforeEach
     void setUp() {

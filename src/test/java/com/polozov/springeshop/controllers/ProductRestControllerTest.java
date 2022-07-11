@@ -31,7 +31,7 @@ class ProductRestControllerTest {
     @MockBean
     private UserService userService;
 
-    private ProductDto dto = new ProductDto(999L, "TestProduct", 999.99);
+    private ProductDto dto = new ProductDto(999L, "TestProduct", 999.99,"huhuhuh");
 
     @BeforeEach
     void setUp() {

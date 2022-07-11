@@ -21,6 +21,7 @@ public class Product {
 	private Long id;
 	private String title;
 	private Double price;
+	private String description;
 	@ManyToMany(cascade = CascadeType.ALL)
 	@JoinTable(name = "products_categories",
 			joinColumns = @JoinColumn(name = "product_id"),

@@ -39,6 +39,7 @@ create table products (
                           id int8 not null,
                           price float8,
                           title varchar(255),
+                          description TEXT,
                           primary key (id)
 );
 

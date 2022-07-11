@@ -29,7 +29,7 @@ class ProductController2IT {
     @MockBean
     private ProductService productService;
 
-    private ProductDto expectedProduct = new ProductDto(99L, "Test Product", 999.99);
+    private ProductDto expectedProduct = new ProductDto(99L, "Test Product", 999.99, "hahaha");
 
     @BeforeEach
     void setUp() {
