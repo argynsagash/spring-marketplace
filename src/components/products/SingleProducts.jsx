@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Avatar, Box, Stack, Typography } from "@mui/material";
 
 import ShareIcon from "@mui/icons-material/Share";
 import { IconButton } from "@mui/material";
@@ -22,12 +22,19 @@ const SingleProduct = ({ product }) => {
   return (
     <>
       <Box
-        disaply="flex"
+        display="flex"
         flexDirection={"column"}
         justifyContent="center"
         alignItems={"center"}
       >
-        <img src={`${product.image}`} alt="Product" width="300px" />
+        <Box>
+          <Avatar
+            src={`${product.image}`}
+            alt="Product"
+            width="200px"
+            sx={{ width: "250px", height: "250px" }}
+          />
+        </Box>
         <Typography color="#ffffff" variant="h5">
           {product.name}
         </Typography>

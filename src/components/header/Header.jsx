@@ -104,7 +104,7 @@ const Header = () => {
                   </ListItemIcon>
                 </ListItemButton>
                 <Divider orientation="vertical" flexItem color="white" />
-                <ListItemButton>
+                <ListItemButton onClick={() => navigate("/profile")}>
                   <ListItemIcon
                     sx={{
                       display: "flex",

@@ -17,6 +17,7 @@ import SingleProduct from "../../components/products/SingleProducts";
 import Cart from "../../components/cart/Cart";
 import Favourite from "../../components/favourite/Favourite";
 import CategoryBar from "../../components/categoryBar/CategoryBar";
+import { useUserCtx } from "../../UserContext";
 
 const messages = [
   { img: `${vehicle}`, text: "Фермерское оборудование" },
@@ -28,7 +29,7 @@ const messages = [
 const ProductsPage = () => {
   const [messageIndex, setMessageIndex] = useState(0);
   const [show, setShow] = useState(true);
-
+  const { setNotLoginOrSignUp } = useUserCtx();
   useEffect(() => {
     setTimeout(() => {
       setShow(false);
@@ -49,6 +50,10 @@ const ProductsPage = () => {
     };
   }, []);
 
+  useEffect(() => {
+    setNotLoginOrSignUp(true);
+  }, []);
+
   const renderProducts = products.map((product) => (
     <Grid
       item
@@ -56,7 +61,8 @@ const ProductsPage = () => {
       md={4}
       display="flex"
       flexDirection="column"
-      alignItems="center"
+      alignItems="stretch"
+      justifyContent="stretch"
       sx={{ mb: 4 }}
     >
       <Paper

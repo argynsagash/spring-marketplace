@@ -17,7 +17,7 @@ const categoryBar = [
 
 export default function CategoryBar() {
   const CategoryBarContent = categoryBar.map((category, index) => (
-    <ListItemButton key={index + 1}>
+    <ListItemButton key={category}>
       <ListItem
         sx={{
           display: "flex",

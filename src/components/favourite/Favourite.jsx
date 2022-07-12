@@ -8,7 +8,6 @@ import {
 } from "@mui/material";
 import { useUserCtx } from "../../UserContext";
 import Box from "@mui/material/Box";
-import IncDec from "../../utlis";
 
 export default function Favourite() {
   const { favourite, setShowFavourite, showFavourite } = useUserCtx();
@@ -28,10 +27,6 @@ export default function Favourite() {
             {item.description}
           </Typography>
           <Typography variant="h6">Цена - {item.price}KZT</Typography>
-
-          <Button variant="contained" color="success" width="300px">
-            Добавить в корзину
-          </Button>
         </Box>
       </Box>
       <Divider variant="fullWidth" color="black" />
