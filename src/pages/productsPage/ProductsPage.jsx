@@ -1,4 +1,4 @@
-import { IconButton, Slide, TextField } from "@mui/material";
+import { IconButton, Paper, Slide, TextField } from "@mui/material";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
@@ -14,6 +14,9 @@ import cow from "../../assets/cow.png";
 import vehicle from "../../assets/vehicle.png";
 import { products } from "../../data/data";
 import SingleProduct from "../../components/products/SingleProducts";
+import Cart from "../../components/cart/Cart";
+import Favourite from "../../components/favourite/Favourite";
+import CategoryBar from "../../components/categoryBar/CategoryBar";
 
 const messages = [
   { img: `${vehicle}`, text: "Фермерское оборудование" },
@@ -54,14 +57,20 @@ const ProductsPage = () => {
       display="flex"
       flexDirection="column"
       alignItems="center"
-      sx={{ mb: 6 }}
+      sx={{ mb: 4 }}
     >
-      <SingleProduct product={product} isFav={0} />
+      <Paper
+        sx={{ p: 2, background: "linear-gradient(360deg, #b08968, #81b29a)" }}
+      >
+        <SingleProduct product={product} />
+      </Paper>
     </Grid>
   ));
 
   return (
     <>
+      <Cart />
+      <Favourite />
       <Box
         sx={{
           minHeight: "100vh",
@@ -74,12 +83,13 @@ const ProductsPage = () => {
           overflow="hidden"
           sx={{
             bgcolor: "#fdfcdc",
-            height: "700px",
+            height: "550px",
             p: 4,
             m: 6,
             borderRadius: 6,
             boxShadow: "0.5px 0.5px 25px 5px  #426c4b",
             backgroundImage: `url(${img3})`,
+            backgroundSize: "100% 150%",
           }}
         >
           <Typography
@@ -120,32 +130,36 @@ const ProductsPage = () => {
             </Box>
           </Slide>
         </Box>
-        <Box
-          sx={{
-            display: "flex",
-            p: 2,
-            mx: 6,
-            mb: 4,
-            justifyContent: "center",
-            alignItems: "center",
-            boxShadow: "0.5px 0.5px 25px 5px  #426c4b",
-            borderRadius: 6,
-          }}
-        >
-          <TextField
-            sx={{ width: "100%" }}
-            color="success"
-            placeholder="Поиск..."
-          />
-          <IconButton sx={{ px: 1, alignSelf: "center" }}>
-            <SearchIcon />
-          </IconButton>
+
+        <Box display="flex">
+          <CategoryBar />
+          <Container sx={{ mb: 4 }} maxWidth="500px">
+            <Box
+              sx={{
+                display: "flex",
+                p: 2,
+                mx: 6,
+                mb: 4,
+                justifyContent: "center",
+                alignItems: "center",
+                boxShadow: "0.5px 0.5px 25px 5px  #426c4b",
+                borderRadius: 6,
+              }}
+            >
+              <TextField
+                sx={{ width: "100%" }}
+                color="success"
+                placeholder="Поиск..."
+              />
+              <IconButton sx={{ px: 1, alignSelf: "center" }}>
+                <SearchIcon />
+              </IconButton>
+            </Box>
+            <Grid container justifyContent="center" spacing={2}>
+              {renderProducts}
+            </Grid>
+          </Container>
         </Box>
-        <Container sx={{ mb: 4 }}>
-          <Grid container justifyContent="center" spacing={4}>
-            {renderProducts}
-          </Grid>
-        </Container>
       </Box>
     </>
   );
