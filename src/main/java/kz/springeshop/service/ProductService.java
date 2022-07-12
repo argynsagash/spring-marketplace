@@ -1,5 +1,6 @@
 package kz.springeshop.service;
 
+import kz.springeshop.domain.Product;
 import kz.springeshop.dto.ProductDto;
 
 import java.util.List;

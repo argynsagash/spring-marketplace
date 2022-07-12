@@ -1,10 +1,13 @@
-package kz.springeshop.service;
+package kz.springeshop.service.impl;
 
-import kz.springeshop.dao.BucketRepository;
-import kz.springeshop.dao.ProductRepository;
+import kz.springeshop.repositories.BucketRepository;
+import kz.springeshop.repositories.ProductRepository;
 import kz.springeshop.dto.BucketDto;
 import kz.springeshop.dto.BucketDetailDto;
 import kz.springeshop.domain.*;
+import kz.springeshop.service.BucketService;
+import kz.springeshop.service.OrderService;
+import kz.springeshop.service.UserService;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;

@@ -1,9 +1,10 @@
-package kz.springeshop.service;
+package kz.springeshop.service.impl;
 
 import kz.springeshop.config.OrderIntegrationConfig;
-import kz.springeshop.dao.OrderRepository;
+import kz.springeshop.repositories.OrderRepository;
 import kz.springeshop.domain.Order;
 import kz.springeshop.dto.OrderIntegrationDto;
+import kz.springeshop.service.OrderService;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Service;

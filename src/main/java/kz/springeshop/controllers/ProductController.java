@@ -14,7 +14,7 @@ import java.security.Principal;
 import java.util.List;
 
 @Controller
-@RequestMapping("/products")
+//@RequestMapping("/products")
 public class ProductController {
 
 	private final ProductService productService;

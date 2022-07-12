@@ -2,5 +2,10 @@
 <project version="4">
   <component name="JpaBuddyIdeaProjectConfig">
     <option name="defaultUnitInitialized" value="true" />
+    <option name="sourceModelValue" value="Default" />
+    <option name="targetDbValue" value="10bb5ace-4cc7-4133-bac0-b44fa99e3589" />
+    <option name="isSnapshotDb" value="false" />
+    <option name="snapshotDbValue" value="10bb5ace-4cc7-4133-bac0-b44fa99e3589" />
+    <option name="snapshotModelValue" value="Default" />
   </component>
 </project>

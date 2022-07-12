@@ -1,9 +1,10 @@
-package kz.springeshop.service;
+package kz.springeshop.service.impl;
 
-import kz.springeshop.dao.UserRepository;
+import kz.springeshop.repositories.UserRepository;
 import kz.springeshop.domain.Role;
 import kz.springeshop.domain.User;
 import kz.springeshop.dto.UserDto;
+import kz.springeshop.service.UserService;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -16,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
-
+//
 @Service
 public class UserServiceImpl implements UserService {
 

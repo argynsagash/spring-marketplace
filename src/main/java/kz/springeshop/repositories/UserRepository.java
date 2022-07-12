@@ -1,4 +1,4 @@
-package kz.springeshop.dao;
+package kz.springeshop.repositories;
 
 import kz.springeshop.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;

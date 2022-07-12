@@ -1,11 +1,14 @@
-package kz.springeshop.service;
+package kz.springeshop.service.impl;
 
-import kz.springeshop.dao.ProductRepository;
+import kz.springeshop.repositories.ProductRepository;
 import kz.springeshop.domain.Bucket;
 import kz.springeshop.domain.Product;
 import kz.springeshop.domain.User;
 import kz.springeshop.dto.ProductDto;
 import kz.springeshop.mapper.ProductMapper;
+import kz.springeshop.service.BucketService;
+import kz.springeshop.service.ProductService;
+import kz.springeshop.service.UserService;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;
 
@@ -72,4 +75,5 @@ public class ProductServiceImpl implements ProductService {
 		Product product = productRepository.findById(id).orElse(new Product());
 		return ProductMapper.MAPPER.fromProduct(product);
 	}
+
 }
